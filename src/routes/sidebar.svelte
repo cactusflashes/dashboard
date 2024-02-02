@@ -1,4 +1,6 @@
 <script>
+    const apiKey = import.meta.env.VITE_API_KEY;
+
     //time and formatting
     var currentDate = new Date();
     var hours = currentDate.getHours();
@@ -38,7 +40,7 @@
     let greeting = getGreeting();
 
     //weather
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=35.1987522&lon=-111.6518229&appid={api_key}&units=imperial`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=35.1987522&lon=-111.6518229&appid={API_KEY}&units=imperial`;
     let currentTemp;
     let currentConditions;
 
