@@ -35,6 +35,8 @@
             return "afternoon";
         } else if (currentHour >= 18 && currentHour < 21) {
             return "evening";
+        } else { 
+            return "evening";
         }
     }
 
