@@ -47,7 +47,6 @@
     fetch(url)
         .then((response) => response.json())
         .then((data) => {
-
             currentTemp = data.main.temp.toFixed(0);
             currentConditions = data.weather[0].description;
         })
@@ -55,16 +54,20 @@
             console.error("Error:", error);
         });
 
-
+    //refreshes page every minute
+    setInterval(function () {
+        location.reload();
+    }, 30000);
 </script>
-
 
 <div class="sidebar">
     <div class="sidebar-text">
         <h2>{formattedTime}</h2>
-        <h3 style="margin: 0; opacity: 0.6;"> {currentDayString} </h3>
+        <h3 style="margin: 0; opacity: 0.6;">{currentDayString}</h3>
         <h2>Good {greeting}, Joseph.</h2>
-        <h3>It's currently {currentTemp}º with {currentConditions} this {greeting}.</h3>
+        <h3>
+            It's currently {currentTemp}º with {currentConditions} this {greeting}.
+        </h3>
     </div>
 </div>
 
