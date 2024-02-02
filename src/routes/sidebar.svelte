@@ -1,4 +1,5 @@
 <script>
+    import { onMount } from "svelte";
     const apiKey = import.meta.env.VITE_API_KEY;
 
     //time and formatting
@@ -54,10 +55,12 @@
             console.error("Error:", error);
         });
 
-    //refreshes page every minute
-    setInterval(function () {
-        location.reload();
-    }, 30000);
+    //refresh page every 30 seconds.
+    onMount(() => {
+        setInterval(() => {
+            window.location.href = window.location.href;
+        }, 30000);
+    });
 </script>
 
 <div class="sidebar">
