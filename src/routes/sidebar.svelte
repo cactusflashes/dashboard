@@ -55,11 +55,11 @@
             console.error("Error:", error);
         });
 
-    //refresh page every 30 seconds.
+    //refresh page every 60 seconds.
     onMount(() => {
         setInterval(() => {
             window.location.href = window.location.href;
-        }, 30000);
+        }, 60000);
     });
 </script>
 
