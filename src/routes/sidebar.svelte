@@ -38,7 +38,7 @@
     let greeting = getGreeting();
 
     //weather
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=35.1987522&lon=-111.6518229&appid=e28dc6acd1bfed7577b41d518f0151b5&units=imperial`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=35.1987522&lon=-111.6518229&appid=${api_key}&units=imperial`;
     let currentTemp;
     let currentConditions;
 
