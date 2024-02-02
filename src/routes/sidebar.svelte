@@ -38,7 +38,6 @@
     let greeting = getGreeting();
 
     //weather
-    let api_key; 
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=35.1987522&lon=-111.6518229&appid={api_key}&units=imperial`;
     let currentTemp;
     let currentConditions;
